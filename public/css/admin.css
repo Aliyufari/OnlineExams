@@ -1,0 +1,240 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #27343C;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: green;
+}
+.admin-login{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 25%;
+	background: #000;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	padding: 40px;
+	border-radius: 5px;
+}
+.admin-login h2{
+	margin: 0 0 15px;
+	text-align: center;
+}
+.admin-login .input-group{
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+}
+.admin-login .input-group input{
+	padding: 8px;
+	outline: none;
+	border: 1px solid darkgreen;
+	border-radius: 3px;
+}
+
+.admin-login .error,
+.admin-login .input-group .error{color: red}
+.content .success {color: green; font-weight: bold;}
+
+.admin-login .input-group input:focus{
+	outline: none;
+	border-color: lightgreen;
+	box-shadow: 0 15px 25px rgba(0,2,0,0);
+}
+.admin-login .submit{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.admin-login .submit a{
+	text-decoration: none;
+	color: green;
+}
+.admin-login .submit a:hover{
+	text-decoration: underline;
+}
+.admin-login button{
+	background: darkgreen;
+	color: #fff;
+	font-size: 14px;
+	padding: 8px 20px;
+	border: 1px solid darkgreen;
+	border-radius: 3px;
+}
+.admin-login button:hover{
+	background: green;
+	border-color: green;
+	cursor: pointer;
+	transition: background 0.5s ease-in;
+}
+
+/*Home Style*/
+.header{
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 40px auto 0 auto;
+	padding: 15px 40px;
+	font-size: 14px;
+	background: black;
+	box-sizing:border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border: 1px solid #03a9f4;
+	border-radius: 50px 50px 50px 50px; 
+	color: #fff;
+}
+
+.header h2{ flex: 2; text-align: left; }
+.header h2 a{ text-decoration: none; color: darkorange; }
+.header h2 a:hover{ color: #03e9f4 }
+
+.header .menu{
+	flex: 8;
+	justify-content: flex-start;
+	margin-left: 10px;
+}
+.header .menu li{
+	display: block;
+	list-style: none;
+	display: inline-block;
+	position: relative;
+}
+.header .menu li a{
+	text-decoration: none;
+	padding: 8px 10px;
+	color: #03a9f4;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+.header .menu li a:hover,
+.header .menu li .dropdown:hover,
+.header .menu li a.active{
+	cursor: pointer;
+	background: rgba(0,0,0,2.9);
+	box-shadow: 0 15px 25px rgba(0,0,0,.8);
+	border-color: darkorange;
+}
+.header .logout{flex: 1;}
+.header .logout a{text-decoration: none; color: orange;}
+.header .logout a:hover{color: #03a9f4;}
+
+.content{
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px;
+	background: black;
+	font-size: 14px;
+	box-sizing:border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5); 
+	color: #fff;
+	border: 1px solid #03a9f4;
+	border-top: none;
+	border-radius: 0 0px 5px 5px;
+}
+.content h2{margin-bottom: 15px; text-align: center; color: #03a9f4; text-shadow: 1px 1px orange;}
+.content .add-new{display: flex; justify-content: flex-end; margin-top: 15px;}
+.content .add-new a {
+	text-decoration: none; 
+	background: blue; 
+	color: #f2f2f2; 
+	padding: 6px 10px; 
+	border-radius: 3px;
+}
+.content .add-new a:hover{background: darkblue;}
+
+.content table{width: 100%; border-collapse: collapse;}
+.content th, td {padding: 10px; text-align: left;}
+
+th{ background: teal; color: #f2f2f2; border-bottom: 2px solid orange;}
+tr{background-color: #f2f2f2; color: black;}
+tr:nth-child(even) {background-color: #ccc; color: black;}
+tr:hover {background-color: #e2e2e2; color: black;}
+
+.content .btn{
+	text-decoration: none;
+	color: #f2f2f2;
+	padding: 5px 8px;
+	border-radius: 3px;
+}
+.content .btn-edit{ background: darkgreen;}
+.content .btn-edit:hover{ background: green;}
+.content .btn-delete{ background: darkred;}
+.content .btn-delete:hover{ background: red;}
+
+/*Create User Form Style*/
+.content form{
+	display: flex;
+	flex-direction: column;
+}
+.content .group{ 
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-between;
+}
+.content .group .input-group{
+	flex-basis: 48%;
+}
+.content .input-group{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+.content .input-group input,
+.content .input-group select{
+	background: #555;
+	padding: 10px 8px;
+	font-size: 15px;
+	outline: none;
+	border: 1px solid green;
+	border-radius: 3px;
+}
+
+.content .input-group select:focus{
+	background: #ccc;	
+}
+
+.content .error,
+.content .input-group .error{color: red}
+
+.content .input-group input:focus{
+	background: #999;
+	outline: none;
+	border-color: #8db14e;
+	box-shadow: 0 15px 25px rgba(0,2,0,0);
+}
+.content .submit{
+	flex-basis: 40%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.content .submit a{
+	text-decoration: none;
+	color: green;
+}
+.content .submit a:hover{
+	text-decoration: underline;
+}
+.content button{
+	background: blue;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px 30px;
+	border: 1px solid blue;
+	border-radius: 3px;
+}
+.content button:hover{
+	background: darkblue;
+	border-color: darkblue;
+	cursor: pointer;
+	transition: background 0.5s ease-in;
+}
