@@ -67,12 +67,17 @@ class UsersController extends User
 		}
 	}
 
+	public function logout()
+	{
+		Session::destroy('email', 'home');
+	}
+
 	public function home()
 	{
 		Session::get('email', 'login');
 		
-		return view("home", [
-			'title' => 'Admin Panel',
+		return view("index", [
+			'title' => '',
 		]);
 	}
 }

@@ -23,16 +23,21 @@
 			<li>
 				<span class="dropdown"><i class="fas fa-pen"></i> About <span class="arrow down"></span></span>
 				<ul class="sub-menu">
-					<li><a href="#">Online Exams</a></li>
+					<li><a href="admin/login">Admin Panel</a></li>
 					<li><a href="#">Developer</a></li>
 					<li><a href="#">Buy Apps</a></li>
 					<li><a href="#">Other Apps</a></li>
 				</ul>
 			</li>
-			<li><a href="#"><i class="fas "></i> Contact</a></li>
+			<li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
 		</ul>
-		<span  class="register"><a href="register"><i class="fas fa-user"></i> Register</a></span>
+		<?php if(isset($_SESSION['email'])): ?>
+			<span  class="register dropdown"><a href="./logout"><i class="fas fa-user"></i> Logout</a></span>
+		<?php else: ?>
+			<span  class="register dropdown"><a href="register"><i class="fas fa-user"></i> Register</a></span>
+		<?php endif; ?>
 	</div>
+
 	<div class="container">
 		<div class="left">
 
@@ -63,8 +68,8 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
-
 		</div>
+
 		<div class="right">
 			<div class="search">
 				<form>

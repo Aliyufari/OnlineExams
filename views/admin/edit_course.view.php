@@ -29,7 +29,7 @@
 						<p><small class="error"><?php isset($error['unit']) ? print($error['unit']) : ''; ?></small></p>
 					</div>
 					<div class="input-group submit">
-						<button type="submit">Create</button>
+						<button type="submit">Update</button>
 					</div>
 				</form>
 			</div>

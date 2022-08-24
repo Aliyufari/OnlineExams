@@ -39,7 +39,7 @@ class AdminController extends Admin
 
 	public function logout()
 	{
-		Session::destroy('email', 'login');
+		Session::destroy('email', 'admin/login');
 	}
 
 	public function home()
@@ -112,6 +112,7 @@ class AdminController extends Admin
 				'name' => $_POST['name'],
 				'email' => $_POST['email'],
 				'username' => $_POST['username'],
+				'gender' => $_POST['gender'],
 				'institution' => $_POST['institution'],
 				'address' => $_POST['address'],
 				'password' => $_POST['password']

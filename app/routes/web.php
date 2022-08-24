@@ -35,10 +35,9 @@ $router->get('admin/logout', 'AdminController@logout');
 $router->post('register', 'UsersController@store');
 $router->post('login', 'UsersController@signin');
 $router->get('login', 'UsersController@login');
+$router->get('logout', 'UsersController@logout');
 $router->get('register', 'UsersController@register');
 $router->get('home', 'UsersController@home');
-
-
 
 
 

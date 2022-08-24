@@ -25,6 +25,11 @@
 				<label>Username</label>
 			</div>
 			<div class="inputbox">
+				<p><small class="error"><?php isset($error['gender']) ? print($error['gender']) : ''; ?></small></p>
+				<input type="text" name="gender" value="<?php isset($old['gender']) ? print($old['gender']) : ''; ?>" required="">
+				<label>Gender</label>
+			</div>
+			<div class="inputbox">
 				<p><small class="error"><?php isset($error['institution']) ? print($error['institution']) : ''; ?></small></p>
 				<input type="text" name="institution" value="<?php isset($old['institution']) ? print($old['institution']) : ''; ?>" required="">
 				<label>Institution Name</label>
